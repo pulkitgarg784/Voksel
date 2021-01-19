@@ -74,12 +74,15 @@ public class editorCamera : MonoBehaviour
         // Zoom
         if (Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftAlt))
         {
+            cursorManager.Instance.setCursor(cursorManager.CursorType.Zoom);
             desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(desiredDistance);
         }
 
           // Pan
         else if (Input.GetMouseButton(2)|| Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftControl))
         {
+            cursorManager.Instance.setCursor(cursorManager.CursorType.Pan);
+
             //grab the rotation of the camera so we can move in a psuedo local XY space
             target.rotation = transform.rotation;
             target.Translate(Vector3.right * -Input.GetAxis("Mouse X") * panSpeed);
@@ -98,6 +101,8 @@ public class editorCamera : MonoBehaviour
           // Orbit
         else if (Input.GetMouseButton(mouseButton))
         {
+            cursorManager.Instance.setCursor(cursorManager.CursorType.Orbit);
+
             xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
             yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
  
@@ -111,6 +116,11 @@ public class editorCamera : MonoBehaviour
  
             rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
             transform.rotation = rotation;
+        }
+        else
+        {
+            cursorManager.Instance.setCursor(cursorManager.CursorType.Default);
+
         }
        
         ////////Orbit Position
@@ -126,6 +136,7 @@ public class editorCamera : MonoBehaviour
         position = target.position - (rotation * Vector3.forward * currentDistance + targetOffset);
         transform.position = position;
     }
+
 
     private static float ClampAngle(float angle, float min, float max)
     {
