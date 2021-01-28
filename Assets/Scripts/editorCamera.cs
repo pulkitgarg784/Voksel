@@ -26,14 +26,14 @@ public class editorCamera : MonoBehaviour
     private Quaternion desiredRotation;
     private Quaternion rotation;
     private Vector3 position;
-     private Quaternion initRotation;
+    private Quaternion initRotation;
     private Vector3 initPosition;
-     private Vector3 initTargetPosition;
+    private Vector3 initTargetPosition;
 
     private int mouseButton = 1; // Right button
 
  
-      void Start() { Init(); }
+    void Start() { Init(); }
 
     void OnEnable() { Init(); }
     
@@ -41,7 +41,7 @@ public class editorCamera : MonoBehaviour
     {
           initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
         initRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
-        //create a temporary target at 'distance' from the cameras current viewpoint
+        //temporary target
         if (!target)
         {
             GameObject go = new GameObject("Cam Target");
@@ -53,7 +53,7 @@ public class editorCamera : MonoBehaviour
     }
     
      private void doInit() {
-          distance = Vector3.Distance(transform.position, target.position);
+        distance = Vector3.Distance(transform.position, target.position);
         currentDistance = distance;
         desiredDistance = distance;
  
@@ -65,12 +65,10 @@ public class editorCamera : MonoBehaviour
         xDeg = Vector3.Angle(Vector3.right, transform.right );
         yDeg = Vector3.Angle(Vector3.up, transform.up );
      }
- 
-    /*
-     * Camera logic on LateUpdate to only update after all character movement logic has been handled.
-     */
+
     void LateUpdate()
     {
+        
         // Zoom
         if (Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftAlt))
         {
@@ -78,18 +76,17 @@ public class editorCamera : MonoBehaviour
             desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(desiredDistance);
         }
 
-          // Pan
+        // Pan
         else if (Input.GetMouseButton(2)|| Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftControl))
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Pan);
 
-            //grab the rotation of the camera so we can move in a psuedo local XY space
             target.rotation = transform.rotation;
-            target.Translate(Vector3.right * -Input.GetAxis("Mouse X") * panSpeed);
-            target.Translate(transform.up * -Input.GetAxis("Mouse Y") * panSpeed, Space.World);
+            target.Translate(Vector3.right * (-Input.GetAxis("Mouse X") * panSpeed));
+            target.Translate(transform.up * (-Input.GetAxis("Mouse Y") * panSpeed), Space.World);
         }
          
-          // Alt + Space: Reset Camera
+        // Alt + Space: Reset Camera
         else if (Input.GetKey(KeyCode.Space)&& Input.GetKey(KeyCode.LeftAlt))
         {
             transform.position = initPosition;
@@ -98,19 +95,19 @@ public class editorCamera : MonoBehaviour
                doInit();
         }
  
-          // Orbit
+        // Orbit
         else if (Input.GetMouseButton(mouseButton))
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Orbit);
+
 
             xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
             yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
  
 
  
-            //Clamp the vertical axis for the orbit
+            //Clamp vertical axis
             yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
-            // set camera rotation
             desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
             currentRotation = transform.rotation;
  
@@ -122,19 +119,18 @@ public class editorCamera : MonoBehaviour
             cursorManager.Instance.setCursor(cursorManager.CursorType.Default);
 
         }
-       
-        ////////Orbit Position
-      
-          // affect the desired Zoom distance if we roll the scrollwheel
-        desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate*2 * Mathf.Abs(desiredDistance);
-        //clamp the zoom min/max
+
+
+        // Zoom according to scroll
+        desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate*4 * Mathf.Abs(desiredDistance);
+        //clamp zoom min/max
         desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
         // For smoothing of the zoom, lerp distance
         currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime * zoomDampening);
- 
-        // calculate position based on the new currentDistance
+        
         position = target.position - (rotation * Vector3.forward * currentDistance + targetOffset);
         transform.position = position;
+      
     }
 
 
