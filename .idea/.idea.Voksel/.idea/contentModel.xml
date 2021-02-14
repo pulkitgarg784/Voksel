@@ -4,11 +4,21 @@
     <e p="C:\Users\Pulkit\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Pulkit\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Voksel.1457360983.00" t="ExcludeRecursive" />
     <e p="C:\Users\Pulkit\Documents\Unity Projects\Voksel" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="box.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="MeshCombineWizard.cs" t="Include" />
+        </e>
+        <e p="PlaceCube.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
+          <e p="Essentials" t="Include">
+            <e p="VoxelData.cs" t="Include" />
+          </e>
+          <e p="VoxelHolder.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
