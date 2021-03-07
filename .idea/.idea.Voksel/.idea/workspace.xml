@@ -2,16 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Cube.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cube.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlaceCube.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/vokselLogoTransparent.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/voxelIcon.psd.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/VokselIcon.blend.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/box.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/Editor/ExporterMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/Editor/ExporterMenu.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXExporter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXExporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXUnityMaterialGetter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXUnityMaterialGetter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXUnityMeshGetter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXUnityMeshGetter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/LICENSE.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UnityFBXExporter/readme.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/exporter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/exporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/gray.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/gray.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/orange.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/orange.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/yellow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/yellow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/FbxExportSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/MeshCombineWizard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/MeshCombineWizard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlaceCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlaceCube.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Essentials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Essentials/VoxelData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Essentials/VoxelData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VoxelHolder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VoxelHolder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +72,10 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/editorCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/box.cs" />
+      <option value="$PROJECT_DIR$/Assets/FBX_Exporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlaceCube.cs" />
+      <option value="$PROJECT_DIR$/Assets/exporter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -59,6 +96,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/voksel_builds\Voksel.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Pulkit\Desktop\voksel_builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -90,7 +135,12 @@
       <workItem from="1612333876817" duration="49000" />
       <workItem from="1613195622155" duration="676000" />
       <workItem from="1613327097867" duration="207000" />
-      <workItem from="1613327369167" duration="1795000" />
+      <workItem from="1613327369167" duration="3643000" />
+      <workItem from="1613387813074" duration="595000" />
+      <workItem from="1613499200520" duration="1370000" />
+      <workItem from="1614789137595" duration="18000" />
+      <workItem from="1615123609492" duration="1370000" />
+      <workItem from="1615136720194" duration="3445000" />
     </task>
     <servers />
   </component>

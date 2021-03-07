@@ -8,17 +8,31 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="box.cs" t="Include" />
-        <e p="Editor" t="Include">
-          <e p="MeshCombineWizard.cs" t="Include" />
-        </e>
+        <e p="exporter.cs" t="Include" />
         <e p="PlaceCube.cs" t="Include" />
+        <e p="QuickOutline" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outline.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
-          <e p="Essentials" t="Include">
-            <e p="VoxelData.cs" t="Include" />
+        </e>
+        <e p="UnityFBXExporter" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ExporterMenu.cs" t="Include" />
           </e>
-          <e p="VoxelHolder.cs" t="Include" />
+          <e p="FBXExporter.cs" t="Include" />
+          <e p="FBXUnityMaterialGetter.cs" t="Include" />
+          <e p="FBXUnityMeshGetter.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

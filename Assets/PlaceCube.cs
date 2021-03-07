@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlaceCube : MonoBehaviour
 {
     private Camera mainCamera;
+    public Transform parent;
     public GameObject cube;
     public float gridSize;
     Vector3 wordPos;
@@ -20,6 +22,8 @@ public class PlaceCube : MonoBehaviour
         Vector3 mousePos=new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
 
         if(Input.GetMouseButtonDown(0)) {
+            if(EventSystem.current.IsPointerOverGameObject())
+                return;
             Ray ray=mainCamera.ScreenPointToRay(mousePos);
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit,1000f)) {
@@ -31,7 +35,8 @@ public class PlaceCube : MonoBehaviour
             wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
             wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
             Debug.Log(wordPos);
-            Instantiate(cube,wordPos,Quaternion.identity); 
+            GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
+            go.transform.SetParent(parent);
         }
         
     }
