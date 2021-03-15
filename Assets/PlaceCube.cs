@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using HSVPicker;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,7 @@ public class PlaceCube : MonoBehaviour
     public GameObject cube;
     public float gridSize;
     Vector3 wordPos;
+    public ColorPicker picker;
 
     void Start()
     {
@@ -37,6 +39,7 @@ public class PlaceCube : MonoBehaviour
             Debug.Log(wordPos);
             GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
             go.transform.SetParent(parent);
+            go.GetComponent<Renderer>().material.color = picker.CurrentColor;
         }
         
     }

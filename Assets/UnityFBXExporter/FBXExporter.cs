@@ -90,7 +90,7 @@ namespace UnityFBXExporter
 
 		public static string VersionInformation
 		{
-			get { return "FBX Unity Export version 1.1.1 (Originally created for the Unity Asset, Building Crafter)"; }
+			get { return "Made with Voksel"; }
 		}
 
 		public static long GetRandomFBXId()

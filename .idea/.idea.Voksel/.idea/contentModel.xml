@@ -9,6 +9,41 @@
       <e p="Assets" t="Include">
         <e p="box.cs" t="Include" />
         <e p="exporter.cs" t="Include" />
+        <e p="HSVPicker" t="Include">
+          <e p="Editor" t="Include">
+            <e p="BoxSliderEditor.cs" t="Include" />
+            <e p="HSVPicker.Editors.asmdef" t="Include" />
+          </e>
+          <e p="Enums" t="Include">
+            <e p="ColorValues.cs" t="Include" />
+          </e>
+          <e p="Events" t="Include">
+            <e p="ColorChangedEvent.cs" t="Include" />
+            <e p="HSVChangedEvent.cs" t="Include" />
+          </e>
+          <e p="ExampleScripts" t="Include">
+            <e p="ColorPickerTester.cs" t="Include" />
+            <e p="TiltWindow.cs" t="Include" />
+          </e>
+          <e p="HSVPicker.asmdef" t="Include" />
+          <e p="Readme.txt" t="Include" />
+          <e p="UI" t="Include">
+            <e p="ColorImage.cs" t="Include" />
+            <e p="ColorLabel.cs" t="Include" />
+            <e p="ColorPicker.cs" t="Include" />
+            <e p="ColorPickerSetup.cs" t="Include" />
+            <e p="ColorPresetManager.cs" t="Include" />
+            <e p="ColorPresets.cs" t="Include" />
+            <e p="ColorSlider.cs" t="Include" />
+            <e p="ColorSliderImage.cs" t="Include" />
+            <e p="HexColorField.cs" t="Include" />
+            <e p="SVBoxSlider.cs" t="Include" />
+          </e>
+          <e p="UtilityScripts" t="Include">
+            <e p="BoxSlider.cs" t="Include" />
+            <e p="HSVUtil.cs" t="Include" />
+          </e>
+        </e>
         <e p="PlaceCube.cs" t="Include" />
         <e p="QuickOutline" t="Include">
           <e p="Readme.txt" t="Include" />
@@ -26,6 +61,37 @@
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
         </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
         <e p="UnityFBXExporter" t="Include">
           <e p="Editor" t="Include">
             <e p="ExporterMenu.cs" t="Include" />
@@ -35,6 +101,8 @@
           <e p="FBXUnityMeshGetter.cs" t="Include" />
         </e>
       </e>
+      <e p="HSVPicker.csproj" t="IncludeRecursive" />
+      <e p="HSVPicker.Editors.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
