@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/BaseGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DxI0X41X0AUwQSM.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DxI0X41X0AUwQSM.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlaceCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlaceCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/exports.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +32,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/box.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BaseGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/editorCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/box.cs" />
       <option value="$PROJECT_DIR$/Assets/FBX_Exporter.cs" />
       <option value="$PROJECT_DIR$/Assets/UnityFBXExporter/FBXExporter.cs" />
       <option value="$PROJECT_DIR$/Assets/exporter.cs" />
       <option value="$PROJECT_DIR$/Assets/PlaceCube.cs" />
+      <option value="$PROJECT_DIR$/Assets/box.cs" />
+      <option value="$PROJECT_DIR$/Assets/BaseGrid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Grid.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -54,7 +67,7 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/voksel_builds\Voksel.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../voksel_builds\Voksel.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Pulkit\Desktop\voksel_builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -100,6 +113,8 @@
       <workItem from="1615136720194" duration="4258000" />
       <workItem from="1615210812217" duration="1362000" />
       <workItem from="1616171971484" duration="583000" />
+      <workItem from="1617558760112" duration="2317000" />
+      <workItem from="1617561108060" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

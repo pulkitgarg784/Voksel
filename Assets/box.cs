@@ -14,15 +14,6 @@ public class box : MonoBehaviour
         outlineshader = GetComponent<Outline>();
         outlineshader.enabled = false;
     }
-
-    private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(1) && canDelete == true)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void OnMouseEnter()
     {
         outlineshader.enabled = true;

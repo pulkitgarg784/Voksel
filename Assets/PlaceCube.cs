@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HSVPicker;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class PlaceCube : MonoBehaviour
 {
@@ -30,15 +31,24 @@ public class PlaceCube : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit,1000f)) {
                 wordPos=hit.point;
-            }
-            wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
-            wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
-            wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
-            Debug.Log(wordPos);
+                if (hit.collider.CompareTag("Box") && Input.GetKey(KeyCode.LeftShift))
+                {
+                    Debug.Log("hit box");
+                    Destroy(hit.collider.gameObject);
+                }
+                else
+                {
+                    wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
+                    wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
+                    wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
+                    Debug.Log(wordPos);
             
-            GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
-            go.transform.SetParent(parent);
-            go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+                    GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
+                    go.transform.SetParent(parent);
+                    go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+                }
+            }
+            
         }
         
     }

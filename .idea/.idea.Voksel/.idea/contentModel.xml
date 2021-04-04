@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Pulkit\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Pulkit\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Voksel.1457360983.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Pulkit\Documents\Unity Projects\Voksel" t="IncludeRecursive">
+    <e p="C:\Users\Pulkit\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Voksel.1640910582.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Pulkit\Desktop\Voksel\Voksel" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="BaseGrid.cs" t="Include" />
         <e p="box.cs" t="Include" />
         <e p="exporter.cs" t="Include" />
         <e p="HSVPicker" t="Include">
