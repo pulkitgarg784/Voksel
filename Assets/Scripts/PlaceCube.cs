@@ -31,10 +31,13 @@ public class PlaceCube : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit,1000f)) {
                 wordPos=hit.point;
-                if (hit.collider.CompareTag("Box") && Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    Debug.Log("hit box");
-                    Destroy(hit.collider.gameObject);
+                    if (hit.collider.CompareTag("Box"))
+                    {
+                        Debug.Log("hit box");
+                        Destroy(hit.collider.gameObject);
+                    }
                 }
                 else
                 {
