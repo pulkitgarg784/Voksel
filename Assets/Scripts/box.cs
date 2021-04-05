@@ -33,7 +33,7 @@ public class box : MonoBehaviour
             cubedata.id = System.DateTime.Now.ToLongDateString() + System.DateTime.Now.ToLongTimeString() +
                           Random.Range(0, int.MaxValue).ToString();
             cubedata.position = transform.position;
-            //cubedata.color = Color.green;
+            cubedata.color = GetComponent<Renderer>().material.color;
             saveData.current.cubes.Add(cubedata);
             Debug.Log(saveData.current.cubes);
         }

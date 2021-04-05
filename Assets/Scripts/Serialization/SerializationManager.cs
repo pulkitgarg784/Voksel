@@ -51,7 +51,10 @@ public class SerializationManager
         BinaryFormatter formatter = new BinaryFormatter();
         SurrogateSelector selector = new SurrogateSelector();
         Vector3SerializationSurrogate vector3Surrogate = new Vector3SerializationSurrogate();
+        ColorSerializationSurrogate colorSurrogate = new ColorSerializationSurrogate();
         selector.AddSurrogate(typeof(Vector3),new StreamingContext(StreamingContextStates.All),vector3Surrogate);
+        selector.AddSurrogate(typeof(Color),new StreamingContext(StreamingContextStates.All),colorSurrogate);
+
         formatter.SurrogateSelector = selector;
         return formatter;
     }

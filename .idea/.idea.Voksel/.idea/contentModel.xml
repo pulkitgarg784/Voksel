@@ -64,6 +64,7 @@
           <e p="exporter.cs" t="Include" />
           <e p="PlaceCube.cs" t="Include" />
           <e p="Serialization" t="Include">
+            <e p="ColorSerializationSurrogate1.cs" t="Include" />
             <e p="cubeData.cs" t="Include" />
             <e p="saveData.cs" t="Include" />
             <e p="SaveManager.cs" t="Include" />

@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class SaveManager : MonoBehaviour
 {
     public GameObject cube;
     public Transform modelHolder;
+    public InputField fileName;
+    public Text projectTitle;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -28,13 +29,18 @@ public class SaveManager : MonoBehaviour
 
     public void OnSave()
     {
-        SerializationManager.Save("save", saveData.current);
+        SerializationManager.Save(fileName.text, saveData.current);
+        projectTitle.text = fileName.text+".voksel";
+        fileName.text = "";
         Debug.Log("saved");
     }
 
     public void OnLoad()
     {
-        saveData.current = (saveData) SerializationManager.Load(Application.persistentDataPath + "/saves/save.voksel");
+        saveData.current = (saveData) SerializationManager.Load(Application.persistentDataPath + "/saves/"+ fileName.text+  ".voksel");
+        projectTitle.text = fileName.text+".voksel";
+        fileName.text = "";
+
         for (int i = 0; i < saveData.current.cubes.Count; i++)
         {
             cubeData currentCube = saveData.current.cubes[i];
@@ -42,7 +48,8 @@ public class SaveManager : MonoBehaviour
             box boxObj = obj.GetComponent<box>();
             boxObj.cubedata = currentCube;
             boxObj.transform.position = currentCube.position;
-            
+            boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+
         }
     }
 }
