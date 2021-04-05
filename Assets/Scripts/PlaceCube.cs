@@ -33,27 +33,33 @@ public class PlaceCube : MonoBehaviour
                 wordPos=hit.point;
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    if (hit.collider.CompareTag("Box"))
-                    {
-                        Debug.Log("hit box");
-                        Destroy(hit.collider.gameObject);
-                    }
+                    deleteCube(hit);
                 }
-                else
-                {
-                    wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
-                    wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
-                    wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
-                    Debug.Log(wordPos);
-            
-                    GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
-                    go.transform.SetParent(parent);
-                    go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+                else{
+                    createCube();
                 }
             }
             
         }
         
     }
-    
+
+    void createCube()
+    {
+        wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
+        wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
+        wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
+        GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
+        go.transform.SetParent(parent);
+        go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+    }
+
+    void deleteCube(RaycastHit hit)
+    {
+        if (hit.collider.CompareTag("Box"))
+        {
+            Debug.Log("hit box");
+            Destroy(hit.collider.gameObject);
+        }
+    }
 }
