@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,19 +13,14 @@ public class SaveManager : MonoBehaviour
     public Text projectTitle;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            OnSave();
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             foreach (Transform child in modelHolder) {
                 GameObject.Destroy(child.gameObject);
             }
-            OnLoad();
-        }
+            projectTitle.text = "untitled.voksel";
 
+        }
     }
 
     public void OnSave()
@@ -37,19 +33,23 @@ public class SaveManager : MonoBehaviour
 
     public void OnLoad()
     {
-        saveData.current = (saveData) SerializationManager.Load(Application.persistentDataPath + "/saves/"+ fileName.text+  ".voksel");
-        projectTitle.text = fileName.text+".voksel";
-        fileName.text = "";
-
-        for (int i = 0; i < saveData.current.cubes.Count; i++)
+        string path = Application.persistentDataPath + "/saves/" + fileName.text + ".voksel";
+        if (File.Exists(path))
         {
-            cubeData currentCube = saveData.current.cubes[i];
-            GameObject obj = Instantiate(cube);
-            box boxObj = obj.GetComponent<box>();
-            boxObj.cubedata = currentCube;
-            boxObj.transform.position = currentCube.position;
-            boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+            saveData.current = (saveData) SerializationManager.Load(path);
+            projectTitle.text = fileName.text + ".voksel";
+            fileName.text = "";
 
+            for (int i = 0; i < saveData.current.cubes.Count; i++)
+            {
+                cubeData currentCube = saveData.current.cubes[i];
+                GameObject obj = Instantiate(cube);
+                obj.transform.SetParent(modelHolder);
+                box boxObj = obj.GetComponent<box>();
+                boxObj.cubedata = currentCube;
+                boxObj.transform.position = currentCube.position;
+                boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+            }
         }
     }
 }

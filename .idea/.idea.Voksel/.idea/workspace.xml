@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/ColorSerializationSurrogate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/ColorSerializationSurrogate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/Vector3SerializationSurrogate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/Vector3SerializationSurrogate.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/box.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +35,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,7 +128,8 @@
       <workItem from="1617558760112" duration="2317000" />
       <workItem from="1617561108060" duration="1012000" />
       <workItem from="1617618974088" duration="8552000" />
-      <workItem from="1617639036929" duration="1004000" />
+      <workItem from="1617639036929" duration="1331000" />
+      <workItem from="1617683020191" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
