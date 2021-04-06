@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +131,7 @@
       <workItem from="1617618974088" duration="8552000" />
       <workItem from="1617639036929" duration="1331000" />
       <workItem from="1617683020191" duration="637000" />
+      <workItem from="1617683793434" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
