@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,8 @@ public class SaveManager : MonoBehaviour
 {
     public GameObject cube;
     public Transform modelHolder;
-    public InputField fileName;
     public Text projectTitle;
+    public GameObject saveLoadPrompt;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,20 +26,17 @@ public class SaveManager : MonoBehaviour
 
     public void OnSave()
     {
-        SerializationManager.Save(fileName.text, saveData.current);
-        projectTitle.text = fileName.text+".voksel";
-        fileName.text = "";
+        string path = EditorUtility.SaveFilePanel("Save as", "", "untitled", "voksel");
+        SerializationManager.Save(path, saveData.current);
         Debug.Log("saved");
     }
 
     public void OnLoad()
     {
-        string path = Application.persistentDataPath + "/saves/" + fileName.text + ".voksel";
+        string path = EditorUtility.OpenFilePanel("Open Project", "", "voksel");
         if (File.Exists(path))
         {
             saveData.current = (saveData) SerializationManager.Load(path);
-            projectTitle.text = fileName.text + ".voksel";
-            fileName.text = "";
 
             for (int i = 0; i < saveData.current.cubes.Count; i++)
             {
@@ -50,6 +48,7 @@ public class SaveManager : MonoBehaviour
                 boxObj.transform.position = currentCube.position;
                 boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
             }
+            saveLoadPrompt.SetActive(false);
         }
     }
 }
