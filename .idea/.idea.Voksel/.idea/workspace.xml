@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/ColorSerializationSurrogate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/ColorSerializationSurrogate.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/Vector3SerializationSurrogate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/Surrogates/Vector3SerializationSurrogate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +47,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/box.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -132,6 +124,8 @@
       <workItem from="1617639036929" duration="1331000" />
       <workItem from="1617683020191" duration="637000" />
       <workItem from="1617683793434" duration="336000" />
+      <workItem from="1617689177417" duration="66000" />
+      <workItem from="1617780029790" duration="235000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

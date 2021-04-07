@@ -62,6 +62,7 @@
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
           <e p="exporter.cs" t="Include" />
+          <e p="HideShowUIPanel.cs" t="Include" />
           <e p="PlaceCube.cs" t="Include" />
           <e p="Serialization" t="Include">
             <e p="cubeData.cs" t="Include" />

@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography.X509Certificates;
-using Autodesk.Fbx;
 using UnityEngine;
 
 public class SerializationManager
