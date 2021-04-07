@@ -35,7 +35,6 @@ public class box : MonoBehaviour
             cubedata.position = transform.position;
             cubedata.color = GetComponent<Renderer>().material.color;
             saveData.current.cubes.Add(cubedata);
-            Debug.Log(saveData.current.cubes);
         }
         
         //assign to load event

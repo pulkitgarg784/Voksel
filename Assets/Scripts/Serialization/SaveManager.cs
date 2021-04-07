@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using SFB;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class SaveManager : MonoBehaviour
     public Transform modelHolder;
     public Text projectTitle;
     public GameObject saveLoadPrompt;
+    
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -26,14 +29,19 @@ public class SaveManager : MonoBehaviour
 
     public void OnSave()
     {
-        string path = EditorUtility.SaveFilePanel("Save as", "", "untitled", "voksel");
+        //string path = EditorUtility.SaveFilePanel("Save as", "", "untitled", "voksel");
+        string path = StandaloneFileBrowser.SaveFilePanel("Save as", "", "untitled", "voksel");
+        path = path.Replace("\\", "/");
+
         SerializationManager.Save(path, saveData.current);
         Debug.Log("saved");
     }
 
     public void OnLoad()
     {
-        string path = EditorUtility.OpenFilePanel("Open Project", "", "voksel");
+        //string path = EditorUtility.OpenFilePanel("Open Project", "", "voksel");
+        string path = StandaloneFileBrowser.OpenFilePanel("Open Project", "", "voksel", false)[0];
+        path = path.Replace("\\", "/");
         if (File.Exists(path))
         {
             saveData.current = (saveData) SerializationManager.Load(path);
