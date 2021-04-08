@@ -59,6 +59,7 @@
         <e p="Scripts" t="Include">
           <e p="BaseGrid.cs" t="Include" />
           <e p="box.cs" t="Include" />
+          <e p="ColorPalette.cs" t="Include" />
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
           <e p="exporter.cs" t="Include" />

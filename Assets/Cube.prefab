@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d690f6abbfdbaf41a9c588b7f12bd3e, type: 2}
+  - {fileID: 2100000, guid: 70f61a588b0235440ad48cc1854414a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,6 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0b23ed835172f4082c9a82ab0107b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubedata:
+    id: 
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  savedata:
+    cubes: []
   canDelete: 1
 --- !u!114 &748663017
 MonoBehaviour:

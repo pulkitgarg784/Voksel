@@ -51,7 +51,8 @@ public class PlaceCube : MonoBehaviour
         wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
         GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
         go.transform.SetParent(parent);
-        go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+        //go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+        go.GetComponent<box>().materialIndex = ColorPalette.instance.currentMaterialIndex;
     }
 
     void deleteCube(RaycastHit hit)

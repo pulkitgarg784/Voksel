@@ -11,7 +11,9 @@ public class box : MonoBehaviour
     public cubeData cubedata;
     public saveData savedata;
     public bool canDelete;
+    public int materialIndex;
 
+    private Renderer renderer;
     private void Awake()
     {
         outlineshader = GetComponent<Outline>();
@@ -36,8 +38,16 @@ public class box : MonoBehaviour
             cubedata.color = GetComponent<Renderer>().material.color;
             saveData.current.cubes.Add(cubedata);
         }
-        
+
+        renderer = gameObject.GetComponent<Renderer>();
+
+
         //assign to load event
+    }
+
+    private void Update()
+    {
+        renderer.material = ColorPalette.instance.colorMaterials[materialIndex];
     }
 
     private void OnDestroy()
