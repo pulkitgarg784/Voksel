@@ -2,60 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Linux.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/BasicSample.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/box.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +124,7 @@
       <workItem from="1617689177417" duration="66000" />
       <workItem from="1617780029790" duration="235000" />
       <workItem from="1617805317247" duration="3802000" />
+      <workItem from="1617881566993" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

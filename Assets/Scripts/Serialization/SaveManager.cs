@@ -32,31 +32,39 @@ public class SaveManager : MonoBehaviour
         //string path = EditorUtility.SaveFilePanel("Save as", "", "untitled", "voksel");
         string path = StandaloneFileBrowser.SaveFilePanel("Save as", "", "untitled", "voksel");
         path = path.Replace("\\", "/");
-
-        SerializationManager.Save(path, saveData.current);
-        Debug.Log("saved");
+        if (path.Length > 0)
+        {
+            SerializationManager.Save(path, saveData.current);
+            saveLoadPrompt.SetActive(false);
+            Debug.Log("saved");
+        }
     }
 
     public void OnLoad()
     {
         //string path = EditorUtility.OpenFilePanel("Open Project", "", "voksel");
-        string path = StandaloneFileBrowser.OpenFilePanel("Open Project", "", "voksel", false)[0];
-        path = path.Replace("\\", "/");
-        if (File.Exists(path))
+        var paths = StandaloneFileBrowser.OpenFilePanel("Open Project", "", "voksel", false);
+        if (paths.Length > 0)
         {
-            saveData.current = (saveData) SerializationManager.Load(path);
-
-            for (int i = 0; i < saveData.current.cubes.Count; i++)
+            string path = paths[0];
+            path = path.Replace("\\", "/");
+            if (File.Exists(path))
             {
-                cubeData currentCube = saveData.current.cubes[i];
-                GameObject obj = Instantiate(cube);
-                obj.transform.SetParent(modelHolder);
-                box boxObj = obj.GetComponent<box>();
-                boxObj.cubedata = currentCube;
-                boxObj.transform.position = currentCube.position;
-                boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+                saveData.current = (saveData) SerializationManager.Load(path);
+
+                for (int i = 0; i < saveData.current.cubes.Count; i++)
+                {
+                    cubeData currentCube = saveData.current.cubes[i];
+                    GameObject obj = Instantiate(cube);
+                    obj.transform.SetParent(modelHolder);
+                    box boxObj = obj.GetComponent<box>();
+                    boxObj.cubedata = currentCube;
+                    boxObj.transform.position = currentCube.position;
+                    boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+                }
+                saveLoadPrompt.SetActive(false);
             }
-            saveLoadPrompt.SetActive(false);
         }
+
     }
 }
