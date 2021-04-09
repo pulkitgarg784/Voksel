@@ -60,7 +60,9 @@ public class SaveManager : MonoBehaviour
                     box boxObj = obj.GetComponent<box>();
                     boxObj.cubedata = currentCube;
                     boxObj.transform.position = currentCube.position;
-                    boxObj.gameObject.GetComponent<Renderer>().material.color = currentCube.color;
+                    //boxObj.gameObject.GetComponent<Renderer>().material = ColorPalette.instance.colorMaterials[currentCube.materialIndex];
+                    boxObj.gameObject.GetComponent<box>().materialIndex = currentCube.materialIndex;
+                    
                 }
                 saveLoadPrompt.SetActive(false);
             }

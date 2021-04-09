@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class cubeData
+public class colorData
 {
-    public string id;
-    public Vector3 position;
     public int materialIndex;
+    public Color color;
 }

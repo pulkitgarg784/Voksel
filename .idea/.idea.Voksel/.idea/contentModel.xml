@@ -66,6 +66,7 @@
           <e p="HideShowUIPanel.cs" t="Include" />
           <e p="PlaceCube.cs" t="Include" />
           <e p="Serialization" t="Include">
+            <e p="colorData.cs" t="Include" />
             <e p="cubeData.cs" t="Include" />
             <e p="saveData.cs" t="Include" />
             <e p="SaveManager.cs" t="Include" />

@@ -32,6 +32,7 @@ public class ColorPalette : MonoBehaviour
 
     private void Update()
     {
+        //TODO remove this from update and run this only when we change the color of the material
         setIndicatorColor();
 
     }

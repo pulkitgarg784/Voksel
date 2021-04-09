@@ -9,8 +9,7 @@ public class box : MonoBehaviour
     // Start is called before the first frame update
     private Outline outlineshader;
     public cubeData cubedata;
-    public saveData savedata;
-    public bool canDelete;
+
     public int materialIndex;
 
     private Renderer renderer;
@@ -35,19 +34,17 @@ public class box : MonoBehaviour
             cubedata.id = System.DateTime.Now.ToLongDateString() + System.DateTime.Now.ToLongTimeString() +
                           Random.Range(0, int.MaxValue).ToString();
             cubedata.position = transform.position;
-            cubedata.color = GetComponent<Renderer>().material.color;
+            cubedata.materialIndex = materialIndex;
             saveData.current.cubes.Add(cubedata);
         }
 
         renderer = gameObject.GetComponent<Renderer>();
 
-
-        //assign to load event
+        renderer.material = ColorPalette.instance.colorMaterials[materialIndex];
     }
 
     private void Update()
     {
-        renderer.material = ColorPalette.instance.colorMaterials[materialIndex];
     }
 
     private void OnDestroy()
