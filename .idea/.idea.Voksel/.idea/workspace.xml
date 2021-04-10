@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/colorHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/palette/mat 0.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/palette/mat 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/palette/mat 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 5.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 5.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 6.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 6.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 7.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 7.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ColorPalette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ColorPalette.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/colorData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/colorData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +43,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/colorHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,15 +63,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/exporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ColorPallete.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/box.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ColorPalette.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/colorData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/box.cs" />
+      <option value="$PROJECT_DIR$/Assets/colorHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ColorPalette.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -134,6 +153,9 @@
       <workItem from="1617881566993" duration="1443000" />
       <workItem from="1617901495439" duration="3189000" />
       <workItem from="1617940571132" duration="1670000" />
+      <workItem from="1617950665505" duration="3768000" />
+      <workItem from="1618039594223" duration="370000" />
+      <workItem from="1618039981239" duration="683000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

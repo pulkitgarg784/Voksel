@@ -30,6 +30,7 @@ public class SaveManager : MonoBehaviour
     public void OnSave()
     {
         //string path = EditorUtility.SaveFilePanel("Save as", "", "untitled", "voksel");
+        ColorPalette.instance.witePaletteToSave();
         string path = StandaloneFileBrowser.SaveFilePanel("Save as", "", "untitled", "voksel");
         path = path.Replace("\\", "/");
         if (path.Length > 0)
@@ -50,6 +51,9 @@ public class SaveManager : MonoBehaviour
             path = path.Replace("\\", "/");
             if (File.Exists(path))
             {
+                foreach (Transform child in modelHolder) {
+                    GameObject.Destroy(child.gameObject);
+                }
                 saveData.current = (saveData) SerializationManager.Load(path);
 
                 for (int i = 0; i < saveData.current.cubes.Count; i++)
@@ -62,7 +66,15 @@ public class SaveManager : MonoBehaviour
                     boxObj.transform.position = currentCube.position;
                     //boxObj.gameObject.GetComponent<Renderer>().material = ColorPalette.instance.colorMaterials[currentCube.materialIndex];
                     boxObj.gameObject.GetComponent<box>().materialIndex = currentCube.materialIndex;
-                    
+                }
+
+                Debug.Log("loading colors");
+                Debug.Log(saveData.current.colorData.Count);
+                for (int i = 0; i < saveData.current.colorData.Count; i++)
+                {
+                    //colorData currentColor = saveData.current.colors[i];
+                    //Debug.Log(i);
+                    ColorPalette.instance.colorMaterials[i].color = saveData.current.colorData[i];
                 }
                 saveLoadPrompt.SetActive(false);
             }

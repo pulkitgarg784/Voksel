@@ -24,5 +24,5 @@ public class saveData
         }
     }
     public List<cubeData> cubes = new List<cubeData>();
-    public List<colorData> colors = new List<colorData>();
+    public List<Color> colorData = new List<Color>();
 }
