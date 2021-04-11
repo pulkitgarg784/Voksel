@@ -37,11 +37,11 @@ public class ColorPalette : MonoBehaviour
 
     private void Start()
     {
-        setIndicatorColor();
+        setIndicatorColors();
         picker.onValueChanged.AddListener(color =>
         {
             colorMaterials[currentMaterialIndex].color = color;
-            setIndicatorColor();
+            setIndicatorColors();
         });
     }
 
@@ -62,7 +62,7 @@ public class ColorPalette : MonoBehaviour
 
     }
 
-    public void setIndicatorColor()
+    public void setIndicatorColors()
     {
         for (int i = 0; i < colorIndicatorButtons.Length; i++)
         {

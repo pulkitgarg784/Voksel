@@ -53,6 +53,7 @@ public class SaveManager : MonoBehaviour
 
     public void OnLoad()
     {
+        
         //string path = EditorUtility.OpenFilePanel("Open Project", "", "voksel");
         var paths = StandaloneFileBrowser.OpenFilePanel("Open Project", "", "voksel", false);
         if (paths.Length > 0)
@@ -87,6 +88,8 @@ public class SaveManager : MonoBehaviour
                     ColorPalette.instance.colorMaterials[i].color = saveData.current.colorData[i];
                 }
                 saveLoadPrompt.SetActive(false);
+                ColorPalette.instance.setIndicatorColors();
+
             }
         }
 
