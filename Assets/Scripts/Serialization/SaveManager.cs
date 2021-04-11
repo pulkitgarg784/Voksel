@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using HSVPicker;
 using SFB;
 using UnityEditor;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class SaveManager : MonoBehaviour
     public Transform modelHolder;
     public Text projectTitle;
     public GameObject saveLoadPrompt;
-    
+    public ColorPicker picker;
+
     
     private void Update()
     {

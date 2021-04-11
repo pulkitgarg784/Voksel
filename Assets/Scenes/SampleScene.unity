@@ -4209,6 +4209,7 @@ MonoBehaviour:
   modelHolder: {fileID: 1495431951}
   projectTitle: {fileID: 833859917}
   saveLoadPrompt: {fileID: 623398931}
+  picker: {fileID: 0}
 --- !u!4 &1312233112
 Transform:
   m_ObjectHideFlags: 0
@@ -4366,6 +4367,7 @@ MonoBehaviour:
   - {fileID: 1581431355}
   - {fileID: 568726785}
   currentMaterialIndex: 0
+  picker: {fileID: 254608750}
 --- !u!1 &1403682950
 GameObject:
   m_ObjectHideFlags: 0

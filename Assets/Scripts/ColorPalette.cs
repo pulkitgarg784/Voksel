@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using HSVPicker;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class ColorPalette : MonoBehaviour
     public Button[] colorIndicatorButtons;
     public int currentMaterialIndex;
     private Color currentColor;
+    
+    public ColorPicker picker;
+
     private void Awake()
     {
         if (instance != null)
@@ -34,12 +38,16 @@ public class ColorPalette : MonoBehaviour
     private void Start()
     {
         setIndicatorColor();
+        picker.onValueChanged.AddListener(color =>
+        {
+            colorMaterials[currentMaterialIndex].color = color;
+            setIndicatorColor();
+        });
     }
 
     private void Update()
     {
         //TODO remove this from update and run this only when we change the color of the material
-        setIndicatorColor();
     }
 
     public void TaskOnClick( int buttonIndex )
@@ -51,6 +59,7 @@ public class ColorPalette : MonoBehaviour
             rectTransform.sizeDelta = new Vector2(25, 25);
         }
         colorIndicatorButtons[buttonIndex].GetComponent<RectTransform>().sizeDelta = new Vector2(40, 40);
+
     }
 
     public void setIndicatorColor()
@@ -64,6 +73,8 @@ public class ColorPalette : MonoBehaviour
     public void selectCurrentColor(int i)
     {
         currentMaterialIndex = i;
+        picker.CurrentColor = colorMaterials[currentMaterialIndex].color;
+
     }
 
     public void witePaletteToSave()
