@@ -17,14 +17,22 @@ public class SaveManager : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.N))
         {
             foreach (Transform child in modelHolder) {
                 GameObject.Destroy(child.gameObject);
             }
             projectTitle.text = "untitled.voksel";
-
         }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.S))
+        {
+            OnSave();
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.O))
+        {
+            OnLoad();
+        }
+        
     }
 
     public void OnSave()
