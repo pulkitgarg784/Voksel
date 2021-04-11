@@ -10,6 +10,7 @@ public class CombineMeshes : MonoBehaviour
     {
         meshCombiner = gameObject.AddComponent<MeshCombiner>();
         meshCombiner.CreateMultiMaterialMesh = true;
+        meshCombiner.DeactivateCombinedChildren = false;
     }
 
     void Update()
