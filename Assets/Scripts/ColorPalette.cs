@@ -45,6 +45,12 @@ public class ColorPalette : MonoBehaviour
     public void TaskOnClick( int buttonIndex )
     {
         selectCurrentColor(buttonIndex);
+        for (int i = 0; i < colorIndicatorButtons.Length; i++)
+        {
+            RectTransform rectTransform = colorIndicatorButtons[i].GetComponent<RectTransform>();
+            rectTransform.sizeDelta = new Vector2(25, 25);
+        }
+        colorIndicatorButtons[buttonIndex].GetComponent<RectTransform>().sizeDelta = new Vector2(40, 40);
     }
 
     public void setIndicatorColor()
