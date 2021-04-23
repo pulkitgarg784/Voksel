@@ -11,10 +11,16 @@ public class exporter : MonoBehaviour
 {
     public GameObject objMeshToExport;
     private MeshCombiner meshCombiner;
-    public bool combineMeshes;
+    bool combineMeshes;
+    public Toggle combineToggle;
     public void ExportFbx()
     {
-        createMesh(getPath());
+        combineMeshes = combineToggle.isOn;
+        string path = getPath();
+        if (path != null)
+        {
+            createMesh(path);
+        }
     }
 
     string getPath()
@@ -26,7 +32,7 @@ public class exporter : MonoBehaviour
         GameObject tempModel = Instantiate(objMeshToExport);
         tempModel.transform.position = objMeshToExport.transform.position;
         if(combineMeshes){combineMesh(tempModel);}
-        FBXExporter.ExportGameObjToFBX(objMeshToExport, path, true, true);
+        FBXExporter.ExportGameObjToFBX(tempModel, path, false, false);
         Destroy(tempModel);
     }
 
