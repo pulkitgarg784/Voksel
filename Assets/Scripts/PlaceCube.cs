@@ -47,7 +47,7 @@ public class PlaceCube : MonoBehaviour
     void createCube()
     {
         wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
-        wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize);
+        wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize) - 0.5f;
         wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
         GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
         go.transform.SetParent(parent);

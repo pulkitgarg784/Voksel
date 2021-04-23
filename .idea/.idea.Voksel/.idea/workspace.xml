@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/untitled.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/untitled.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GUN.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GUN.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/cubeAdjusted.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/cubeAdjusted.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/cubeAdjusted.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/cubeAdjusted.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CombineMeshes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CombineMeshes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/palette/mat 12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/untitled.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/untitled.fbx.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ColorPallete.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/colorData.cs" />
@@ -61,6 +65,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExampleClass.cs" />
       <option value="$PROJECT_DIR$/Assets/CombineMeshes.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/exporter.cs" />
     </changedPaths>
   </component>
@@ -146,7 +151,8 @@
       <workItem from="1618039981239" duration="683000" />
       <workItem from="1618121321561" duration="1681000" />
       <workItem from="1618152671680" duration="821000" />
-      <workItem from="1618161933373" duration="2404000" />
+      <workItem from="1618161933373" duration="2578000" />
+      <workItem from="1619066601989" duration="3345000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

@@ -11,30 +11,32 @@ public class exporter : MonoBehaviour
 {
     public GameObject objMeshToExport;
     private MeshCombiner meshCombiner;
+    public bool combineMeshes;
     public void ExportFbx()
     {
-        //string path  = EditorUtility.SaveFilePanel("Export as FBX", "", "untitled", "fbx");
-        string path = StandaloneFileBrowser.SaveFilePanel("Export as FBX", "", "untitled", "fbx");
-        //string path = @"C:\Users\Pulkit\Desktop\untitled.fbx";
-        path = path.Replace("\\", "/");
-        Debug.Log(path);
-        createMesh(path);
-        Debug.Log("exported");
+        createMesh(getPath());
     }
 
+    string getPath()
+    {
+        return StandaloneFileBrowser.SaveFilePanel("Export as FBX", "", "untitled", "fbx").Replace("\\", "/");
+    }
     void createMesh(string path)
     {
-        
         GameObject tempModel = Instantiate(objMeshToExport);
+        tempModel.transform.position = objMeshToExport.transform.position;
+        if(combineMeshes){combineMesh(tempModel);}
+        FBXExporter.ExportGameObjToFBX(objMeshToExport, path, true, true);
+        Destroy(tempModel);
+    }
+
+    void combineMesh(GameObject tempModel)
+    {
         meshCombiner = tempModel.AddComponent<MeshCombiner>();
         meshCombiner.CreateMultiMaterialMesh = true;
         meshCombiner.DeactivateCombinedChildren = false;
         meshCombiner.DestroyCombinedChildren = true;
         meshCombiner.CombineMeshes(false);
-        FBXExporter.ExportGameObjToFBX(tempModel, path, true, true);
-        Destroy(tempModel);
-
-
     }
 }
 

@@ -3831,7 +3831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1495431951}
-  cube: {fileID: 6798081440881224537, guid: 3693e17c6f8cae547a19e1a8c3af00b2, type: 3}
+  cube: {fileID: 1422731386082271732, guid: 7c652a2aedd54c140b75824f83abef83, type: 3}
   gridSize: 10
   picker: {fileID: 254608750}
 --- !u!114 &963194230
@@ -5034,7 +5034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8110c16efa0d8234f86db0db0677cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 6798081440881224537, guid: 3693e17c6f8cae547a19e1a8c3af00b2, type: 3}
+  cube: {fileID: 1422731386082271732, guid: 7c652a2aedd54c140b75824f83abef83, type: 3}
   modelHolder: {fileID: 1495431951}
   projectTitle: {fileID: 833859917}
   saveLoadPrompt: {fileID: 623398931}
@@ -5875,7 +5875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495431950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
