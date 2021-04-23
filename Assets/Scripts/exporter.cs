@@ -13,29 +13,34 @@ public class exporter : MonoBehaviour
     private MeshCombiner meshCombiner;
     bool combineMeshes;
     public Toggle combineToggle;
+    public Dropdown fileFormatSelector;
+    private string path;
     public void ExportFbx()
     {
         combineMeshes = combineToggle.isOn;
-        string path = getPath();
-        if (path != null)
+        if (fileFormatSelector.value == 0){ path = getPath("fbx");}
+
+        if (fileFormatSelector.value == 1)
         {
-            createMesh(path);
+            path = getPath("obj");
+            combineMeshes = true;
         }
+        if (path != null)
+        {createMesh();}
     }
 
-    string getPath()
+    string getPath(string format)
     {
-        return StandaloneFileBrowser.SaveFilePanel("Export as FBX", "", "untitled", "fbx").Replace("\\", "/");
+        return StandaloneFileBrowser.SaveFilePanel("Export as "+ format.ToUpper(), "", "untitled", format).Replace("\\", "/");
     }
-    void createMesh(string path)
+    void createMesh()
     {
         GameObject tempModel = Instantiate(objMeshToExport);
         tempModel.transform.position = objMeshToExport.transform.position;
         if(combineMeshes){combineMesh(tempModel);}
-        FBXExporter.ExportGameObjToFBX(tempModel, path, false, false);
-        Destroy(tempModel);
+        exportMesh(tempModel);
+        //Destroy(tempModel);
     }
-
     void combineMesh(GameObject tempModel)
     {
         meshCombiner = tempModel.AddComponent<MeshCombiner>();
@@ -43,6 +48,22 @@ public class exporter : MonoBehaviour
         meshCombiner.DeactivateCombinedChildren = false;
         meshCombiner.DestroyCombinedChildren = true;
         meshCombiner.CombineMeshes(false);
+    }
+
+    void exportMesh(GameObject obj)
+    {
+        if (fileFormatSelector.value == 0){FBXExporter.ExportGameObjToFBX(obj, path, false, false);}
+
+        if (fileFormatSelector.value == 1)
+        {
+            ObjExporter.MeshToFile(obj.GetComponent<MeshFilter>(),path);
+        }
+        Debug.Log("exported");
+    }
+
+    public void setCombineToggleState()
+    {
+        combineToggle.gameObject.SetActive(!(fileFormatSelector.value == 1));
     }
 }
 

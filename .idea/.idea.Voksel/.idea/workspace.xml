@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/untitled1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/untitled1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/untitled2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/untitled2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjExporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objExporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" afterDir="false" />
@@ -30,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjExporter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/cursorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -59,6 +59,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ExampleClass.cs" />
       <option value="$PROJECT_DIR$/Assets/CombineMeshes.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/objExporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/exporter.cs" />
     </changedPaths>
   </component>
@@ -76,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -146,7 +147,7 @@
       <workItem from="1618152671680" duration="821000" />
       <workItem from="1618161933373" duration="2578000" />
       <workItem from="1619066601989" duration="3345000" />
-      <workItem from="1619154045020" duration="1288000" />
+      <workItem from="1619154045020" duration="3467000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
