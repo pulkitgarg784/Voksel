@@ -21,10 +21,7 @@ public class SaveManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.N))
         {
-            foreach (Transform child in modelHolder) {
-                GameObject.Destroy(child.gameObject);
-            }
-            projectTitle.text = "untitled.voksel";
+            OnNew();
         }
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.S))
         {
@@ -35,6 +32,14 @@ public class SaveManager : MonoBehaviour
             OnLoad();
         }
         
+    }
+
+    public void OnNew()
+    {
+        foreach (Transform child in modelHolder) {
+            GameObject.Destroy(child.gameObject);
+        }
+        projectTitle.text = "untitled.voksel";
     }
 
     public void OnSave()

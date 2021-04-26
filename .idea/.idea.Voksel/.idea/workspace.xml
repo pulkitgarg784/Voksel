@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjExporter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objExporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/saveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/InputFieldEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjExporter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,7 +44,6 @@
       <option value="$PROJECT_DIR$/Assets/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/Vector3SerializationSurrogate.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ColorSerializationSurrogate1.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ColorPallete.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/cubeData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
@@ -55,12 +52,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/box.cs" />
       <option value="$PROJECT_DIR$/Assets/colorHolder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ColorPalette.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExampleClass.cs" />
       <option value="$PROJECT_DIR$/Assets/CombineMeshes.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/objExporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/exporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HideShowUIPanel.cs" />
+      <option value="$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/InputFieldEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SaveManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -148,6 +147,7 @@
       <workItem from="1618161933373" duration="2578000" />
       <workItem from="1619066601989" duration="3345000" />
       <workItem from="1619154045020" duration="3467000" />
+      <workItem from="1619445483951" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>

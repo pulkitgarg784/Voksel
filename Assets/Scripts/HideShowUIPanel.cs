@@ -18,4 +18,9 @@ public class HideShowUIPanel : MonoBehaviour
             panel.SetActive(false);
         }
     }
+
+    public void TogglePanel(GameObject panel)
+    {
+        panel.SetActive(!panel.activeSelf);
+    }
 }
