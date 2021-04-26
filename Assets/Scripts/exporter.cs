@@ -15,7 +15,7 @@ public class exporter : MonoBehaviour
     public Toggle combineToggle;
     public Dropdown fileFormatSelector;
     private string path;
-    public void ExportFbx()
+    public void ExportModel()
     {
         combineMeshes = combineToggle.isOn;
         if (fileFormatSelector.value == 0){ path = getPath("fbx");}
