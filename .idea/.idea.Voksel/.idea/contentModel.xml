@@ -86,6 +86,7 @@
             <e p="cursorManager.cs" t="Include" />
             <e p="DragWindow.cs" t="Include" />
             <e p="HideShowUIPanel.cs" t="Include" />
+            <e p="ResizeWindow.cs" t="Include" />
           </e>
         </e>
         <e p="StandaloneFileBrowser" t="Include">
