@@ -68,10 +68,8 @@
           <e p="BaseGrid.cs" t="Include" />
           <e p="box.cs" t="Include" />
           <e p="ColorPalette.cs" t="Include" />
-          <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
           <e p="exporter.cs" t="Include" />
-          <e p="HideShowUIPanel.cs" t="Include" />
           <e p="objExporter.cs" t="Include" />
           <e p="PlaceCube.cs" t="Include" />
           <e p="Serialization" t="Include">
@@ -83,6 +81,11 @@
               <e p="ColorSerializationSurrogate.cs" t="Include" />
               <e p="Vector3SerializationSurrogate.cs" t="Include" />
             </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="cursorManager.cs" t="Include" />
+            <e p="DragWindow.cs" t="Include" />
+            <e p="HideShowUIPanel.cs" t="Include" />
           </e>
         </e>
         <e p="StandaloneFileBrowser" t="Include">
