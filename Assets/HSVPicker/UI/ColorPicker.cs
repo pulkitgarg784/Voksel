@@ -278,7 +278,10 @@ namespace HSVPicker
         {
             if (Setup.ShowRgb)
             {
-                Setup.SliderToggleButtonText.text = "RGB";
+                if (Setup.SliderToggleButtonText != null)
+                {
+                    Setup.SliderToggleButtonText.text = "RGB";
+                }
             }
 
             if (Setup.ShowHsv)

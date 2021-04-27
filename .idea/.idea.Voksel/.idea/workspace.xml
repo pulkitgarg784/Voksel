@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DragWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DragWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HSVPicker/Picker 2.0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HSVPicker/Picker 2.0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/palette/mat 0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/palette/mat 0.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +150,7 @@
       <workItem from="1619066601989" duration="3345000" />
       <workItem from="1619154045020" duration="3467000" />
       <workItem from="1619445483951" duration="1288000" />
-      <workItem from="1619500773415" duration="1581000" />
+      <workItem from="1619500773415" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
