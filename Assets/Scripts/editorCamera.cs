@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [AddComponentMenu("Editor Tools/Editor Free Camera")]
 
@@ -30,16 +31,22 @@ public class editorCamera : MonoBehaviour
     private Vector3 initPosition;
     private Vector3 initTargetPosition;
 
-    private int mouseButton = 1; // Right button
+    //control scheme    
+    public  enum Scheme {Blender,Unity};
+    public Scheme currentControlScheme;
+    public Dropdown schemeDropdown;
 
- 
-    void Start() { Init(); }
+    void Start()
+    {
+        Init();
+        currentControlScheme = Scheme.Blender;
+    }
 
     void OnEnable() { Init(); }
     
      public void Init()
     {
-          initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
+        initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
         initRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         //temporary target
         if (!target)
@@ -69,34 +76,24 @@ public class editorCamera : MonoBehaviour
     void LateUpdate()
     {
         
-        // Zoom
-        if (Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftAlt))
+        // blender zoom
+        if (currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) && Input.GetKey(KeyCode.LeftControl))
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Zoom);
             desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(desiredDistance);
         }
 
-        // Pan
-        else if (Input.GetMouseButton(2)|| Input.GetMouseButton(mouseButton) && Input.GetKey(KeyCode.LeftControl))
+        // Pan(unity: mmb, blender: shift+mmb)
+        else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(2)||currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) && Input.GetKey(KeyCode.LeftShift))
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Pan);
-
             target.rotation = transform.rotation;
             target.Translate(Vector3.right * (-Input.GetAxis("Mouse X") * panSpeed));
             target.Translate(transform.up * (-Input.GetAxis("Mouse Y") * panSpeed), Space.World);
         }
-         
-        // Alt + Space: Reset Camera
-        else if (Input.GetKey(KeyCode.Space)&& Input.GetKey(KeyCode.LeftAlt))
-        {
-            transform.position = initPosition;
-               transform.rotation = initRotation;
-               target.transform.position = initTargetPosition;
-               doInit();
-        }
- 
-        // Orbit
-        else if (Input.GetMouseButton(mouseButton))
+        
+        // Orbit(Unity:RMB, Blender: MMB)
+        else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(1) || currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) )
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Orbit);
 
@@ -149,6 +146,18 @@ public class editorCamera : MonoBehaviour
         Gizmos.color = Color.red;
         if(target!=null){
             Gizmos.DrawSphere(target.position, 1);
+        }
+    }
+
+    public void setControlScheme()
+    {
+        if (schemeDropdown.value == 0)
+        {
+            currentControlScheme = Scheme.Blender;
+        }
+        if (schemeDropdown.value == 1)
+        {
+            currentControlScheme = Scheme.Unity;
         }
     }
 }
