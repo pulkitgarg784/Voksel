@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BaseGrid : MonoBehaviour
 {
     private Renderer renderer;
     [Range(0, 50)]
     public int gridSize;
+
+    public Text gridSizeText;
+    public Slider gridSizeSlider;
     void Start()
     {
         renderer = gameObject.GetComponent<Renderer>();
@@ -28,5 +32,10 @@ public class BaseGrid : MonoBehaviour
             renderer.material.mainTextureOffset = new Vector2(0f, 0f);
 
         }
+    }
+    public void SetSliderValue()
+    {
+        gridSize = (int) gridSizeSlider.value;
+        gridSizeText.text = gridSize.ToString();
     }
 }
