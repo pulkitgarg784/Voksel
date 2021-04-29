@@ -7189,7 +7189,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1312233115}
-        m_MethodName: setCombineToggleState
+        m_MethodName: SetCombineToggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12018,8 +12018,6 @@ MonoBehaviour:
   cube: {fileID: 1422731386082271732, guid: 7c652a2aedd54c140b75824f83abef83, type: 3}
   modelHolder: {fileID: 1495431951}
   projectTitle: {fileID: 833859917}
-  saveLoadPrompt: {fileID: 1325695682}
-  picker: {fileID: 0}
 --- !u!4 &1312233112
 Transform:
   m_ObjectHideFlags: 0
@@ -12074,7 +12072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caca67ad5d16e01498b3ec9bcef2af98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objMeshToExport: {fileID: 1495431950}
+  meshToExport: {fileID: 1495431950}
   combineToggle: {fileID: 1703618607}
   fileFormatSelector: {fileID: 330703502}
 --- !u!114 &1312233116

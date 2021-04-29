@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 [AddComponentMenu("Editor Tools/Editor Free Camera")]
 
-public class editorCamera : MonoBehaviour
+public class EditorCamera : MonoBehaviour
 {
     public Transform target;
     public Vector3 targetOffset;
@@ -19,17 +19,17 @@ public class editorCamera : MonoBehaviour
     public float panSpeed = 0.3f;
     public float zoomDampening = 5.0f;
 
-    private float xDeg = 0.0f;
-    private float yDeg = 0.0f;
-    private float currentDistance;
-    private float desiredDistance;
-    private Quaternion currentRotation;
-    private Quaternion desiredRotation;
-    private Quaternion rotation;
-    private Vector3 position;
-    private Quaternion initRotation;
-    private Vector3 initPosition;
-    private Vector3 initTargetPosition;
+    private float _xDeg = 0.0f;
+    private float _yDeg = 0.0f;
+    private float _currentDistance;
+    private float _desiredDistance;
+    private Quaternion _currentRotation;
+    private Quaternion _desiredRotation;
+    private Quaternion _rotation;
+    private Vector3 _position;
+    private Quaternion _initRotation;
+    private Vector3 _initPosition;
+    private Vector3 _initTargetPosition;
 
     //control scheme    
     public  enum Scheme {Blender,Unity};
@@ -46,31 +46,31 @@ public class editorCamera : MonoBehaviour
     
      public void Init()
     {
-        initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
-        initRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+        _initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
+        _initRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         //temporary target
         if (!target)
         {
             GameObject go = new GameObject("Cam Target");
             go.transform.position = transform.position + (transform.forward * distance);
-               initTargetPosition = go.transform.position;
+               _initTargetPosition = go.transform.position;
             target = go.transform;
         }
-          doInit();
+          DoInit();
     }
     
-     private void doInit() {
+     private void DoInit() {
         distance = Vector3.Distance(transform.position, target.position);
-        currentDistance = distance;
-        desiredDistance = distance;
+        _currentDistance = distance;
+        _desiredDistance = distance;
  
-        position = transform.position;
-        rotation = transform.rotation;
-        currentRotation = transform.rotation;
-        desiredRotation = transform.rotation;
+        _position = transform.position;
+        _rotation = transform.rotation;
+        _currentRotation = transform.rotation;
+        _desiredRotation = transform.rotation;
 
-        xDeg = Vector3.Angle(Vector3.right, transform.right );
-        yDeg = Vector3.Angle(Vector3.up, transform.up );
+        _xDeg = Vector3.Angle(Vector3.right, transform.right );
+        _yDeg = Vector3.Angle(Vector3.up, transform.up );
      }
 
     void LateUpdate()
@@ -80,7 +80,7 @@ public class editorCamera : MonoBehaviour
         if (currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) && Input.GetKey(KeyCode.LeftControl))
         {
             cursorManager.Instance.setCursor(cursorManager.CursorType.Zoom);
-            desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(desiredDistance);
+            _desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(_desiredDistance);
         }
 
         // Pan(unity: mmb, blender: shift+mmb)
@@ -98,18 +98,18 @@ public class editorCamera : MonoBehaviour
             cursorManager.Instance.setCursor(cursorManager.CursorType.Orbit);
 
 
-            xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
-            yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+            _xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+            _yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
  
 
  
             //Clamp vertical axis
-            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
-            desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
-            currentRotation = transform.rotation;
+            _yDeg = ClampAngle(_yDeg, yMinLimit, yMaxLimit);
+            _desiredRotation = Quaternion.Euler(_yDeg, _xDeg, 0);
+            _currentRotation = transform.rotation;
  
-            rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
-            transform.rotation = rotation;
+            _rotation = Quaternion.Lerp(_currentRotation, _desiredRotation, Time.deltaTime * zoomDampening);
+            transform.rotation = _rotation;
         }
         else
         {
@@ -119,14 +119,14 @@ public class editorCamera : MonoBehaviour
 
 
         // Zoom according to scroll
-        desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate*4 * Mathf.Abs(desiredDistance);
+        _desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate*4 * Mathf.Abs(_desiredDistance);
         //clamp zoom min/max
-        desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
+        _desiredDistance = Mathf.Clamp(_desiredDistance, minDistance, maxDistance);
         // For smoothing of the zoom, lerp distance
-        currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime * zoomDampening);
+        _currentDistance = Mathf.Lerp(_currentDistance, _desiredDistance, Time.deltaTime * zoomDampening);
         
-        position = target.position - (rotation * Vector3.forward * currentDistance + targetOffset);
-        transform.position = position;
+        _position = target.position - (_rotation * Vector3.forward * _currentDistance + targetOffset);
+        transform.position = _position;
       
     }
 
@@ -149,7 +149,7 @@ public class editorCamera : MonoBehaviour
         }
     }
 
-    public void setControlScheme()
+    public void SetControlScheme()
     {
         if (schemeDropdown.value == 0)
         {

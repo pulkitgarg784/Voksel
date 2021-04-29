@@ -5,63 +5,64 @@ using System.IO;
 using SFB;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityFBXExporter;
 using UnityEngine.UI;
-public class exporter : MonoBehaviour
+public class Exporter : MonoBehaviour
 {
-    public GameObject objMeshToExport;
-    private MeshCombiner meshCombiner;
-    bool combineMeshes;
+    public GameObject meshToExport;
+    private MeshCombiner _meshCombiner;
+    bool _combineMeshes;
     public Toggle combineToggle;
     public Dropdown fileFormatSelector;
-    private string path;
+    private string _path;
     public void ExportModel()
     {
-        combineMeshes = combineToggle.isOn;
-        if (fileFormatSelector.value == 0){ path = getPath("fbx");}
+        _combineMeshes = combineToggle.isOn;
+        if (fileFormatSelector.value == 0){ _path = GetPath("fbx");}
 
         if (fileFormatSelector.value == 1)
         {
-            path = getPath("obj");
-            combineMeshes = true;
+            _path = GetPath("obj");
+            _combineMeshes = true;
         }
-        if (path != null)
-        {createMesh();}
+        if (_path != null)
+        {CreateMesh();}
     }
 
-    string getPath(string format)
+    string GetPath(string format)
     {
         return StandaloneFileBrowser.SaveFilePanel("Export as "+ format.ToUpper(), "", "untitled", format).Replace("\\", "/");
     }
-    void createMesh()
+    void CreateMesh()
     {
-        GameObject tempModel = Instantiate(objMeshToExport);
-        tempModel.transform.position = objMeshToExport.transform.position;
-        if(combineMeshes){combineMesh(tempModel);}
-        exportMesh(tempModel);
-        //Destroy(tempModel);
+        GameObject tempModel = Instantiate(meshToExport);
+        tempModel.transform.position = meshToExport.transform.position;
+        if(_combineMeshes){CombineMesh(tempModel);}
+        ExportMesh(tempModel);
+        Destroy(tempModel);
     }
-    void combineMesh(GameObject tempModel)
+    void CombineMesh(GameObject tempModel)
     {
-        meshCombiner = tempModel.AddComponent<MeshCombiner>();
-        meshCombiner.CreateMultiMaterialMesh = true;
-        meshCombiner.DeactivateCombinedChildren = false;
-        meshCombiner.DestroyCombinedChildren = true;
-        meshCombiner.CombineMeshes(false);
+        _meshCombiner = tempModel.AddComponent<MeshCombiner>();
+        _meshCombiner.CreateMultiMaterialMesh = true;
+        _meshCombiner.DeactivateCombinedChildren = false;
+        _meshCombiner.DestroyCombinedChildren = true;
+        _meshCombiner.CombineMeshes(false);
     }
 
-    void exportMesh(GameObject obj)
+    void ExportMesh(GameObject obj)
     {
-        if (fileFormatSelector.value == 0){FBXExporter.ExportGameObjToFBX(obj, path, false, false);}
+        if (fileFormatSelector.value == 0){FBXExporter.ExportGameObjToFBX(obj, _path, false, false);}
 
         if (fileFormatSelector.value == 1)
         {
-            ObjExporter.MeshToFile(obj.GetComponent<MeshFilter>(),path);
+            ObjExporter.MeshToFile(obj.GetComponent<MeshFilter>(),_path);
         }
         Debug.Log("exported");
     }
 
-    public void setCombineToggleState()
+    public void SetCombineToggleState()
     {
         combineToggle.gameObject.SetActive(!(fileFormatSelector.value == 1));
     }
