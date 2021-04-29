@@ -13,9 +13,6 @@ public class SaveManager : MonoBehaviour
     public GameObject cube;
     public Transform modelHolder;
     public Text projectTitle;
-    public GameObject saveLoadPrompt;
-    public ColorPicker picker;
-
     
     private void Update()
     {
@@ -51,7 +48,6 @@ public class SaveManager : MonoBehaviour
         if (path.Length > 0)
         {
             SerializationManager.Save(path, saveData.current);
-            saveLoadPrompt.SetActive(false);
             Debug.Log("saved");
         }
     }
@@ -92,7 +88,7 @@ public class SaveManager : MonoBehaviour
                     //Debug.Log(i);
                     ColorPalette.instance.colorMaterials[i].color = saveData.current.colorData[i];
                 }
-                saveLoadPrompt.SetActive(false);
+
                 ColorPalette.instance.setIndicatorColors();
 
             }
