@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cursorManager : MonoBehaviour
+public class CursorManager : MonoBehaviour
 {
-    public static cursorManager Instance { get; private set; }
+    public static CursorManager Instance { get; private set; }
 
     private void Awake()
     {
@@ -28,22 +28,22 @@ public class cursorManager : MonoBehaviour
     }
 
     [SerializeField]private List<CustomCursor> customCursorList;
-    private CustomCursor customCursor;
+    private CustomCursor _customCursor;
 
-    private Vector2 cursorOffset;
+    private Vector2 _cursorOffset;
     // Start is called before the first frame update
     void Start()
     {
-        setCursor(CursorType.Pan);
+        SetCursor(CursorType.Pan);
     }
 
-    public void setCursor(CursorType customCursor)
+    public void SetCursor(CursorType customCursor)
     {
         
-        this.customCursor = getCursor(customCursor);
+        this._customCursor = GetCursor(customCursor);
     }
 
-    private CustomCursor getCursor(CursorType cursorType)
+    private CustomCursor GetCursor(CursorType cursorType)
     {
         foreach (CustomCursor cursor in customCursorList)
         {
@@ -61,13 +61,13 @@ public class cursorManager : MonoBehaviour
     void Update()
     {
 
-        if (customCursor != null)
+        if (_customCursor != null)
         {
-            cursorOffset = new Vector2(10,10);
+            _cursorOffset = new Vector2(10,10);
 
             //Sets the cursor to the Crosshair sprite with given offset 
             //and automatic switching to hardware default if necessary
-            Cursor.SetCursor(customCursor.texture, cursorOffset, CursorMode.Auto);
+            Cursor.SetCursor(_customCursor.texture, _cursorOffset, CursorMode.Auto);
 
         }
     }
