@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/editorCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EditorCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/exporter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/editorCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/exporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/cursorManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nIen1ACpcJQ4M6fyc0yX0Zqibo" />
@@ -157,7 +157,7 @@
       <workItem from="1619500773415" duration="2848000" />
       <workItem from="1619522063338" duration="2520000" />
       <workItem from="1619530773685" duration="1450000" />
-      <workItem from="1619673427763" duration="488000" />
+      <workItem from="1619673427763" duration="1303000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
