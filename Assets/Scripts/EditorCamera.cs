@@ -39,7 +39,21 @@ public class EditorCamera : MonoBehaviour
     void Start()
     {
         Init();
-        currentControlScheme = Scheme.Blender;
+        if (PlayerPrefs.HasKey("Scheme"))
+        {
+            if (PlayerPrefs.GetString("Scheme") == "Unity")
+            {
+                currentControlScheme = Scheme.Unity;
+            }
+            else if (PlayerPrefs.GetString("Scheme") == "Blender")
+            {
+                currentControlScheme = Scheme.Blender;
+            }
+        }
+        else
+        {
+            currentControlScheme = Scheme.Blender;
+        }
     }
 
     void OnEnable() { Init(); }
@@ -154,10 +168,13 @@ public class EditorCamera : MonoBehaviour
         if (schemeDropdown.value == 0)
         {
             currentControlScheme = Scheme.Blender;
+            PlayerPrefs.SetString("Scheme","Blender");
         }
         if (schemeDropdown.value == 1)
         {
             currentControlScheme = Scheme.Unity;
+            PlayerPrefs.SetString("Scheme","Unity");
+
         }
     }
 }
