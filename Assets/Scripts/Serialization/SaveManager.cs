@@ -13,6 +13,7 @@ public class SaveManager : MonoBehaviour
     public GameObject cube;
     public Transform modelHolder;
     public Text projectTitle;
+    public Text debugText;
     
     private void Update()
     {
@@ -29,6 +30,12 @@ public class SaveManager : MonoBehaviour
             OnLoad();
         }
         
+    }
+
+    private void Start()
+    {
+        string[] args = Environment.GetCommandLineArgs();
+        debugText.text ="1: "+ args[0].ToString() +"2: "+ args[1].ToString() + "2: "+args[2].ToString() +"3: "+ args[3].ToString();
     }
 
     public void OnNew()
