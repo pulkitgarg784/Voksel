@@ -670,10 +670,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: d595c051-bbe1-4f49-af26-b7525e089160
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Voksel
+  organizationId: pulkitgarg784
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
