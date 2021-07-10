@@ -93,14 +93,14 @@ public class EditorCamera : MonoBehaviour
         // blender zoom
         if (currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) && Input.GetKey(KeyCode.LeftControl))
         {
-            CursorManager.Instance.SetCursor(CursorManager.CursorType.Zoom);
+            cursorManager.Instance.SetCursor(cursorManager.CursorType.Zoom);
             _desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate*0.125f * Mathf.Abs(_desiredDistance);
         }
 
         // Pan(unity: mmb, blender: shift+mmb)
         else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(2)||currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) && Input.GetKey(KeyCode.LeftShift))
         {
-            CursorManager.Instance.SetCursor(CursorManager.CursorType.Pan);
+            cursorManager.Instance.SetCursor(cursorManager.CursorType.Pan);
             target.rotation = transform.rotation;
             target.Translate(Vector3.right * (-Input.GetAxis("Mouse X") * panSpeed));
             target.Translate(transform.up * (-Input.GetAxis("Mouse Y") * panSpeed), Space.World);
@@ -109,7 +109,7 @@ public class EditorCamera : MonoBehaviour
         // Orbit(Unity:RMB, Blender: MMB)
         else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(1) || currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) )
         {
-            CursorManager.Instance.SetCursor(CursorManager.CursorType.Orbit);
+            cursorManager.Instance.SetCursor(cursorManager.CursorType.Orbit);
 
 
             _xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
@@ -127,7 +127,7 @@ public class EditorCamera : MonoBehaviour
         }
         else
         {
-            CursorManager.Instance.SetCursor(CursorManager.CursorType.Default);
+            cursorManager.Instance.SetCursor(cursorManager.CursorType.Default);
 
         }
 

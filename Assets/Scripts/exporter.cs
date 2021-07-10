@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityFBXExporter;
 using UnityEngine.UI;
-public class Exporter : MonoBehaviour
+public class exporter : MonoBehaviour
 {
     public GameObject meshToExport;
     private MeshCombiner _meshCombiner;
