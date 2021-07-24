@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Windows.Forms;
 using UnityEngine.UI;
+
+[AddComponentMenu("Editor Tools/Editor Free Camera")]
 
 public class EditorCamera : MonoBehaviour
 {
@@ -34,8 +35,6 @@ public class EditorCamera : MonoBehaviour
     public  enum Scheme {Blender,Unity};
     public Scheme currentControlScheme;
     public Dropdown schemeDropdown;
-    public bool emulateMidMouse;
-    public Toggle midMouseToggle;
 
     void Start()
     {
@@ -51,26 +50,16 @@ public class EditorCamera : MonoBehaviour
                 currentControlScheme = Scheme.Blender;
             }
         }
-        if (PlayerPrefs.HasKey("EmulateMiddleMouse"))
-        { 
-            if (PlayerPrefs.GetString("EmulateMiddleMouse") == "true")
-            {
-                emulateMidMouse = true;
-                midMouseToggle.isOn = true;
-            }
-            else
-            { 
-                emulateMidMouse = false;
-                midMouseToggle.isOn = false;
-            }
+        else
+        {
+            currentControlScheme = Scheme.Blender;
         }
-    
     }
 
     void OnEnable() { Init(); }
     
      public void Init()
-     {
+    {
         _initPosition = new Vector3(transform.position.x, transform.position.y,transform.position.z);
         _initRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         //temporary target
@@ -118,7 +107,7 @@ public class EditorCamera : MonoBehaviour
         }
         
         // Orbit(Unity:RMB, Blender: MMB)
-        else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(1) || currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) || currentControlScheme == Scheme.Blender && emulateMidMouse && Input.GetMouseButton(1) && Input.GetKey(KeyCode.LeftAlt) )
+        else if (currentControlScheme == Scheme.Unity && Input.GetMouseButton(1) || currentControlScheme == Scheme.Blender && Input.GetMouseButton(2) )
         {
             cursorManager.Instance.SetCursor(cursorManager.CursorType.Orbit);
 
@@ -185,20 +174,7 @@ public class EditorCamera : MonoBehaviour
         {
             currentControlScheme = Scheme.Unity;
             PlayerPrefs.SetString("Scheme","Unity");
-        }
 
-    }
-    public void CheckboxValueChanged(bool isOn) {
-        if (isOn)
-        {
-            PlayerPrefs.SetString("EmulateMiddleMouse","true");
-            emulateMidMouse = true;
-        }
-        else
-        {
-            PlayerPrefs.SetString("EmulateMiddleMouse","false");
-            emulateMidMouse = false;
         }
     }
-    
 }
