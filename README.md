@@ -19,6 +19,7 @@ Voksel is a free and open source 3d modelling tool that aims to simplify the pro
 Download the latest release for your operating system and you are free to start using the program.
 - Left click to place voxel.
 - Shift + Left click to delete.
+- Press / to open command box to use custom functions.
 
 
 ## Screenshots
