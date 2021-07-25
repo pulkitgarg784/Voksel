@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CommandConsole : MonoBehaviour
 {
@@ -175,7 +176,8 @@ public class CommandConsole : MonoBehaviour
 
         };
     }
-    
+
+    private Vector2 scroll;
     private void OnGUI()
     {
         if (!showConsole) { return; }
@@ -186,7 +188,28 @@ public class CommandConsole : MonoBehaviour
             GUI.FocusControl(null);
             Event.current.Use();
         }
-        float y = Screen.height - 45;
+
+        float y = 60;
+
+        if (showHelp)
+        {
+            
+            GUI.Box(new Rect(0,y,Screen.width,100), "");
+            Rect viewport = new Rect(0, 0, Screen.width - 30, 20 * commandList.Count);
+            scroll = GUI.BeginScrollView(new Rect(0, y + 5f, Screen.width, 90), scroll, viewport);
+
+            for (int i = 0; i < commandList.Count; i++)
+            {
+                UtilityCommandBase command = commandList[i] as UtilityCommandBase;
+                string label = $"{command.commandFormat} - {command.commandDescription}";
+                GUIStyle helpStyle = new GUIStyle(GUI.skin.label);
+                helpStyle.fontSize = 16;
+                Rect labelRect = new Rect(5, 20 * i, viewport.width - 100, 40);
+                GUI.Label(labelRect, label,helpStyle);
+            }
+            GUI.EndScrollView();
+            y += 100;
+        }
         GUI.Box(new Rect(0,y,Screen.width,45), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);
         GUIStyle textStyle = new GUIStyle(GUI.skin.textField);
