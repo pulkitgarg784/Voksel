@@ -159,7 +159,6 @@ public class EditorCamera : MonoBehaviour
 
     void Zoom()
     {   
-        Debug.Log("blender zoom");
         cursorManager.Instance.SetCursor(cursorManager.CursorType.Zoom);
         _desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate * 0.125f *
                             Mathf.Abs(_desiredDistance);
@@ -167,7 +166,6 @@ public class EditorCamera : MonoBehaviour
 
     void Pan()
     {
-        Debug.Log("Pan");
         cursorManager.Instance.SetCursor(cursorManager.CursorType.Pan);
         target.rotation = transform.rotation;
         target.Translate(Vector3.right * (-Input.GetAxis("Mouse X") * panSpeed));
@@ -176,7 +174,6 @@ public class EditorCamera : MonoBehaviour
 
     void Orbit()
     {
-        Debug.Log("Orbit");
         cursorManager.Instance.SetCursor(cursorManager.CursorType.Orbit);
 
 
