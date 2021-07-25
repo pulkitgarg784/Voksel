@@ -12,6 +12,7 @@ Voksel is a free and open source 3d modelling tool that aims to simplify the pro
 - Export to FBX and OBJ with more formats coming soon.
 - Customizable color palletes
 - Preset control schemes (Unity & Blender)
+- Generate models using code
 - Tiny file size
 ## Getting Started
 
