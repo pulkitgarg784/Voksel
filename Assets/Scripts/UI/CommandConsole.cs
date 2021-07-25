@@ -9,7 +9,9 @@ public class CommandConsole : MonoBehaviour
     private string input;
 
     public static UtilityCommand VOXEL;
-    public static UtilityCommand<int> BOX;
+    public static UtilityCommand<int,Vector3> BOX;
+    public static UtilityCommand<int,Vector3> LINE;
+
 
     public List<object> commandList;
     // Start is called before the first frame update
@@ -25,24 +27,33 @@ public class CommandConsole : MonoBehaviour
             PlaceCube.instance.createCube(0,0,0);
         });
         
-        BOX = new UtilityCommand<int>("box", "Generate a box", "box <size>", (x) =>
+        BOX = new UtilityCommand<int,Vector3>("box", "Generate a box", "box <size> <start x> <start y> <start z>", (x,v3) =>
         {
-            for (int i = 0; i <= x; i++)
+            for (int i = 0; i < x; i++)
             {
-                for (int j = 0; j <= x; j++)
+                for (int j = 0; j < x; j++)
                 {
-                    for (int k = 0; k <= x; k++)
+                    for (int k = 0; k < x; k++)
                     {
-                        PlaceCube.instance.createCube(i,j,k);
+                        PlaceCube.instance.createCube(v3.x+i,v3.y+j,v3.z+k);
                     }
                 }
             }
         });
+        
+        LINE = new UtilityCommand<int,Vector3>("line", "Generate a line", "line <length> <start x> <start y> <start z>", (x,v3) =>
+        {
+            for (int i = 0; i <= x; i++)
+            {
+                PlaceCube.instance.createCube(v3.x+ i,v3.y,v3.z);
+            }
+    });
 
         commandList = new List<object>
         {
             VOXEL,
-            BOX
+            BOX,
+            LINE
         };
     }
 
@@ -87,6 +98,11 @@ public class CommandConsole : MonoBehaviour
                 else if (commandList[i] as UtilityCommand<int> != null)
                 {
                     (commandList[i] as UtilityCommand<int>).Invoke(int.Parse(props[1]));
+                }
+                
+                else if (commandList[i] as UtilityCommand<int,Vector3> != null)
+                {
+                    (commandList[i] as UtilityCommand<int,Vector3>).Invoke(int.Parse(props[1]),new Vector3(int.Parse(props[2]),int.Parse(props[3]),int.Parse(props[4])));
                 }
             }
         }
