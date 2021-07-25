@@ -10482,6 +10482,7 @@ MonoBehaviour:
   zoomRate: 100
   panSpeed: 0.5
   zoomDampening: 100
+  canPlaceCube: 1
   currentControlScheme: 0
   schemeDropdown: {fileID: 1370723951}
   emulateMidMouse: 0
@@ -12465,7 +12466,6 @@ MonoBehaviour:
   parent: {fileID: 1495431951}
   cube: {fileID: 1422731386082271732, guid: 7c652a2aedd54c140b75824f83abef83, type: 3}
   gridSize: 10
-  picker: {fileID: 202247711}
 --- !u!114 &1312233115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12719,8 +12719,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 963194230}
-        m_MethodName: SetControlScheme
-        m_Mode: 1
+        m_MethodName: SelectControlScheme
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

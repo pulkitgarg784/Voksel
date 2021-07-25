@@ -12,8 +12,7 @@ public class PlaceCube : MonoBehaviour
     public GameObject cube;
     public float gridSize;
     Vector3 wordPos;
-    public ColorPicker picker;
-
+    private EditorCamera editorCamera;
     void Start()
     {
         mainCamera = Camera.main;
@@ -24,7 +23,7 @@ public class PlaceCube : MonoBehaviour
     {
         Vector3 mousePos=new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
 
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftAlt)){
             if(EventSystem.current.IsPointerOverGameObject())
                 return;
             Ray ray=mainCamera.ScreenPointToRay(mousePos);
