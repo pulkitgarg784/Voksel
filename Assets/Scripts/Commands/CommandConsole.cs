@@ -22,6 +22,29 @@ public class CommandConsole : MonoBehaviour
 
     public void Awake()
     {
+        DefineCommands();
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+           showConsole = !showConsole;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && showConsole)
+        {
+            Debug.Log("enter");
+            HandleInput();
+            input = "";
+        }
+    }
+
+    void DefineCommands()
+    {
+        //Commands
         VOXEL = new UtilityCommand("voxel", "Generate a voxel", "voxel", () =>
         {
             PlaceCube.instance.createCube(0,0,0);
@@ -47,8 +70,11 @@ public class CommandConsole : MonoBehaviour
             {
                 PlaceCube.instance.createCube(v3.x+ i,v3.y,v3.z);
             }
-    });
-
+        });
+        
+        //TODO: Add a Sphere command
+        
+        //Add commands to list
         commandList = new List<object>
         {
             VOXEL,
@@ -56,27 +82,17 @@ public class CommandConsole : MonoBehaviour
             LINE
         };
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Slash))
-        {
-           showConsole = !showConsole;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return) && showConsole)
-        {
-            Debug.Log("enter");
-            HandleInput();
-            input = "";
-        }
-    }
-
+    
     private void OnGUI()
     {
         if (!showConsole) { return; }
-
+        if (Event.current.keyCode == KeyCode.Return)
+        {
+            HandleInput();
+            input = "";
+            GUI.FocusControl(null);
+            Event.current.Use();
+        }
         float y = Screen.height - 30;
         GUI.Box(new Rect(0,y,Screen.width,30), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);
