@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Windows.Forms;
 using UnityEngine.UI;
 
 public class EditorCamera : MonoBehaviour
