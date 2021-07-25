@@ -1,65 +1,78 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using HSVPicker;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 
 public class PlaceCube : MonoBehaviour
 {
+
     private Camera mainCamera;
     public Transform parent;
     public GameObject cube;
     public float gridSize;
-    Vector3 wordPos;
+    Vector3 worldPos;
+
+    public static PlaceCube instance;
     private EditorCamera editorCamera;
-    void Start()
-    {
-        mainCamera = Camera.main;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 mousePos=new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
+        void Start()
+        {
+            mainCamera = Camera.main;
+        }
 
-        if(Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftAlt)){
-            if(EventSystem.current.IsPointerOverGameObject())
-                return;
-            Ray ray=mainCamera.ScreenPointToRay(mousePos);
-            RaycastHit hit;
-            if(Physics.Raycast(ray,out hit,1000f)) {
-                wordPos=hit.point;
-                if (Input.GetKey(KeyCode.LeftShift))
+        private void Awake()
+        {
+            instance = this;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+            Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
+
+            if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftAlt))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+                Ray ray = mainCamera.ScreenPointToRay(mousePos);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 1000f))
                 {
-                    deleteCube(hit);
-                }
-                else{
-                    createCube();
+                    worldPos = hit.point;
+                    if (Input.GetKey(KeyCode.LeftShift))
+                    {
+                        deleteCube(hit);
+                    }
+                    else
+                    {
+                        Debug.Log("create");
+                        createCube(worldPos.x, worldPos.y,worldPos.z);
+                    }
                 }
             }
-            
         }
-        
-    }
 
-    void createCube()
-    {
-        wordPos.x = Mathf.Round((wordPos.x / gridSize) *gridSize);
-        wordPos.y = Mathf.Round((wordPos.y / gridSize) *gridSize) - 0.5f;
-        wordPos.z = Mathf.Round((wordPos.z / gridSize) *gridSize);
-        GameObject go =  Instantiate(cube,wordPos,Quaternion.identity); 
-        go.transform.SetParent(parent);
-        //go.GetComponent<Renderer>().material.color = picker.CurrentColor;
-        go.GetComponent<box>().materialIndex = ColorPalette.instance.currentMaterialIndex;
-    }
-
-    void deleteCube(RaycastHit hit)
-    {
-        if (hit.collider.CompareTag("Box"))
+        public void createCube(float xpos, float ypos, float zpos)
         {
-            Debug.Log("hit box");
-            Destroy(hit.collider.gameObject);
+            Vector3 pos = new Vector3();
+
+            pos.x = Mathf.Round((xpos / gridSize) * gridSize);
+            pos.y = Mathf.Round((ypos / gridSize) * gridSize) - 0.5f;
+            pos.z = Mathf.Round((zpos / gridSize) * gridSize);
+            GameObject go = Instantiate(cube, pos, Quaternion.identity);
+            go.transform.SetParent(parent);
+            //go.GetComponent<Renderer>().material.color = picker.CurrentColor;
+            go.GetComponent<box>().materialIndex = ColorPalette.instance.currentMaterialIndex;
+        }
+
+        void deleteCube(RaycastHit hit)
+        {
+            if (hit.collider.CompareTag("Box"))
+            {
+                Debug.Log("hit box");
+                Destroy(hit.collider.gameObject);
+            }
         }
     }
-}

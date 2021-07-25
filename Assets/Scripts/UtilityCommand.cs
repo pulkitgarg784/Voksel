@@ -36,3 +36,18 @@ public class UtilityCommand : UtilityCommandBase
     }
 }
 
+public class UtilityCommand<T1> : UtilityCommandBase
+{
+    private Action<T1> command;
+
+    public UtilityCommand(string id, string description, string format, Action<T1> command) : base(id, description, format)
+    {
+        this.command = command;
+    }
+
+    public void Invoke(T1 value)
+    {
+        command.Invoke(value);
+    }
+}
+
